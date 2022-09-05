@@ -8,19 +8,19 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\kevin\\.nuget\\packages\\": {}
+    "C:\\Users\\smartlab\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kevin\\OneDrive\\Desktop\\TwitterAnalysis\\TwitterAnalysis\\TwitterAnalysis\\TwitterAnalysis.csproj",
+      "projectUniqueName": "C:\\Users\\smartlab\\Desktop\\TwitterAnalysis\\TwitterAnalysis\\TwitterAnalysis.csproj",
       "projectName": "TwitterAnalysis",
-      "projectPath": "C:\\Users\\kevin\\OneDrive\\Desktop\\TwitterAnalysis\\TwitterAnalysis\\TwitterAnalysis\\TwitterAnalysis.csproj",
-      "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kevin\\OneDrive\\Desktop\\TwitterAnalysis\\TwitterAnalysis\\TwitterAnalysis\\obj\\",
+      "projectPath": "C:\\Users\\smartlab\\Desktop\\TwitterAnalysis\\TwitterAnalysis\\TwitterAnalysis.csproj",
+      "packagesPath": "C:\\Users\\smartlab\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\smartlab\\Desktop\\TwitterAnalysis\\TwitterAnalysis\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\smartlab\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

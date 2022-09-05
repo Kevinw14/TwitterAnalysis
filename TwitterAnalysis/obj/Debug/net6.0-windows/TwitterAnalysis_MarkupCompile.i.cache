@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\kevin\OneDrive\Desktop\TwitterAnalysis\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\
+C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\
 TwitterAnalysis
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\kevin\OneDrive\Desktop\TwitterAnalysis\TwitterAnalysis\TwitterAnalysis\App.xaml
-11407045341
+C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\App.xaml
+2-1566202000
 
-51129566431
+6-1261834812
 194-200944676
-MainWindow.xaml;
+MainWindow.xaml;TAAndOrRadioButton.xaml;
 
-False
+True
 
