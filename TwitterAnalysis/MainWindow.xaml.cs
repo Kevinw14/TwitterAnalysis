@@ -25,8 +25,7 @@ namespace TwitterAnalysis
             string query = SearchTextBox.Text;
             client = new TwitterClient();
             TweetSearchResponse? TweetResponse = await client.searchTweetsURL(TwitterClient.Timeline.RECENT, query);
-            TweetsTable.ItemsSource = TweetResponse?.Data;
-            TweetsTable.Columns[0].Visibility = Visibility.Hidden;
+            TweetsTable.ItemsSource = TweetResponse.Data;
         }
     }
 }

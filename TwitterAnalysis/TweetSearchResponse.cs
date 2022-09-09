@@ -9,5 +9,6 @@ namespace TwitterAnalysis
     internal class TweetSearchResponse
     {
         public List<Tweet>? Data { get; set; }
+        public MetaData? Meta { get; set; }
     }
 }
