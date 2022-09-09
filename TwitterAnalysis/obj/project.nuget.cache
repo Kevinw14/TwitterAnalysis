@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "UY8GONRWQrleScA4x57aDGanzLAeP1nRe9AUf171BQ2NmpsfSdJ28i65+54xmVmrzk5qktmb+CBd6fxRN0Y2vQ==",
+  "dgSpecHash": "iV1VJNN2qAfD4D9ytjiYGjUw21hA08Im9IcvtGo2AmRd7Q2T/9MBWnkKYm0RANsAaZx6x8mDjrqSryw3RFjO/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\smartlab\\Desktop\\TwitterAnalysis\\TwitterAnalysis\\TwitterAnalysis.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\smartlab\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

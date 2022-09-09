@@ -1,17 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Net.Http.Headers;
+using System.IO;
+using Newtonsoft;
+using System.Net.Http;
+using Newtonsoft.Json;
+using System.Runtime.CompilerServices;
 
 namespace TwitterAnalysis
 {
@@ -20,9 +14,19 @@ namespace TwitterAnalysis
     /// </summary>
     public partial class MainWindow : Window
     {
+        private TwitterClient client;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private async void SearchButton_Click(object sender, RoutedEventArgs e)
+        {
+            string query = SearchTextBox.Text;
+            client = new TwitterClient();
+            TweetSearchResponse? TweetResponse = await client.searchTweetsURL(TwitterClient.Timeline.RECENT, query);
+            TweetsTable.ItemsSource = TweetResponse?.Data;
+            TweetsTable.Columns[0].Visibility = Visibility.Hidden;
         }
     }
 }

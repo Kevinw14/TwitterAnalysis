@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TwitterAnalysis": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "BEARER_TOKEN": "AAAAAAAAAAAAAAAAAAAAABnNcQEAAAAAHn9DanV%2BLHrD5oLYujclzr3TC9A%3Dr62cTzJl43SSyhkodw54Lgg0NENsuAaVwLRLJru4NdQMOkVxqT"
+      }
+    }
+  }
+}
