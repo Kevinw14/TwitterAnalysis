@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TwitterAnalysis
+namespace TwitterAnalysis.TwitterAPI
 {
     internal class MetaData
     {
-
         public string? newest_id;
         public string? oldest_id;
         public int? result_count;
