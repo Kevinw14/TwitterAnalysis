@@ -177,7 +177,7 @@ namespace TwitterAnalysis.TwitterAPI
         {
             get
             {
-                string queryString = "?query=";
+                string queryString = "";
                 for (int i = 0; i < queries.Count; i++)
                 {
                     TweetSearchQuery query = queries[i];

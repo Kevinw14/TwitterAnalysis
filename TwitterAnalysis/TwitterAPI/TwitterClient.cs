@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Collections.Specialized;
 using System.Windows;
+using System.Collections.Generic;
 
 namespace TwitterAnalysis.TwitterAPI
 {
@@ -18,20 +19,25 @@ namespace TwitterAnalysis.TwitterAPI
         }
         public async Task<TweetSearchResponse?> searchTweetsURL(TweetSearchRequest search_request)
         {
-            UriBuilder uri_builder = new UriBuilder();
-            uri_builder.Scheme = "http";
-            uri_builder.Host = "api.twitter.com";
+            URLComponents Components = new URLComponents();
+            Components.Protocol = "https";
+            Components.BaseURL = "api.twitter.com";
 
             switch (search_request.Timeline)
             {
                 case Timeline.ALL:
-                    uri_builder.Path = "/2/tweets/search/all";
+                    Components.Path = "/2/tweets/search/all";
                     break;
                 case Timeline.RECENT:
-                    uri_builder.Path = "/2/tweets/search/recent";
+                    Components.Path = "/2/tweets/search/recent";
                     break;
             }
-            string url = uri_builder.ToString() + search_request.QueryString;
+
+            MessageBox.Show(HttpUtility.UrlPathEncode("query=Radford University"));
+            List<QueryItem> QueryItems = new List<QueryItem>();
+            QueryItems.Add(new QueryItem("query", search_request.QueryString));
+            Components.QueryItems = QueryItems;
+            string url = Components.URL;
             MessageBox.Show(url);
             HttpClient WebClient = new HttpClient();
             WebClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearer_token);
