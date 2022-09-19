@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "TwitterAnalysis/1.0.0": {
         "dependencies": {
-          "Newtonsoft.Json": "13.0.1"
+          "Newtonsoft.Json": "13.0.1",
+          "TwitterAPI": "1.0.0"
         },
         "runtime": {
           "TwitterAnalysis.dll": {}
@@ -19,6 +20,17 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
             "assemblyVersion": "13.0.0.0",
             "fileVersion": "13.0.1.25517"
+          }
+        }
+      },
+      "TwitterAPI/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1"
+        },
+        "runtime": {
+          "lib/netstandard2.1/TwitterAPI.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       }
@@ -36,6 +48,13 @@
       "sha512": "sha512-ppPFpBcvxdsfUonNcvITKqLl3bqxWbDCZIzDWHzjpdAHRFfZe0Dw9HmA0+za13IdyrgJwpkDTDA9fHaxOrt20A==",
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
+    },
+    "TwitterAPI/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SB7j7w3L5cFiMCKEnc94aKEVWPX9x5Y+dCelNVogqXVIeESg1/wvQB+GGSi5Zt3IkWwRCNja5eOfQHnKBcT4IQ==",
+      "path": "twitterapi/1.0.0",
+      "hashPath": "twitterapi.1.0.0.nupkg.sha512"
     }
   }
 }

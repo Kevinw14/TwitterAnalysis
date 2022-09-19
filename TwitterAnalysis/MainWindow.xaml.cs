@@ -1,13 +1,6 @@
 ﻿using System;
 using System.Windows;
-using System.Net.Http.Headers;
-using System.IO;
-using Newtonsoft;
-using System.Net.Http;
-using Newtonsoft.Json;
-using System.Runtime.CompilerServices;
-using TwitterAnalysis.TwitterAPI;
-using System.Windows.Documents;
+using TwitterAPI;
 using System.Collections.Generic;
 
 namespace TwitterAnalysis
@@ -17,7 +10,6 @@ namespace TwitterAnalysis
     /// </summary>
     public partial class MainWindow : Window
     {
-        private TwitterClient client;
         public MainWindow()
         {
             InitializeComponent();
@@ -26,16 +18,17 @@ namespace TwitterAnalysis
         private async void SearchButton_Click(object sender, RoutedEventArgs e)
         {
             string query_text = SearchTextBox.Text;
-            client = new TwitterClient(Environment.GetEnvironmentVariable("BEARER_TOKEN"));
-            List<TweetSearchQuery> search_queries = new List<TweetSearchQuery>();
-            List<FilterItem> radford_filters = new List<FilterItem>();
-            List<FilterItem> university_filters = new List<FilterItem>();
-            radford_filters.Add(new FilterItem(false, Filter.RETWEET));
-            university_filters.Add(new FilterItem(true, Filter.HASHTAGS));
-            TweetSearchQuery radford_search_query = new TweetSearchQuery(query_text, radford_filters);
-            search_queries.Add(radford_search_query);
-            TweetSearchRequest search_request = new TweetSearchRequest(Timeline.RECENT, null, null, null, null, null, null, search_queries);
-            TweetSearchResponse? TweetResponse = await client.searchTweetsURL(search_request);
+            TwitterClient Client = new TwitterClient(Environment.GetEnvironmentVariable("BEARER_TOKEN"));
+            List<TweetSearchQuery> Queries = new List<TweetSearchQuery>();
+            TweetSearchQuery Query = new TweetSearchQuery(query_text);
+            Queries.Add(Query);
+            TweetSearchRequest SearchRequest = new TweetSearchRequest(Queries, Timeline.RECENT, 5);
+            APIResponse<TweetSearchData> SearchData = await Client.SearchTweets(SearchRequest);
+            for (int i = 0; i < SearchData.Data.Data.Count; i++)
+            {
+                Tweet Tweet = SearchData.Data.Data[i];
+                MessageBox.Show(Tweet.Text);
+            }
         }
     }
 }
