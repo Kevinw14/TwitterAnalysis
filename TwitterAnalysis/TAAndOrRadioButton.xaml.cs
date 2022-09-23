@@ -1,20 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace TwitterAnalysis
 {
+    public interface TAAndOrRadioButtonDelegate
+    {
+        void addButtonPressed();
+    }
     public enum Conditional
     {
         AND,
@@ -28,22 +21,32 @@ namespace TwitterAnalysis
         {
             get { return condition; }
         }
+
+        public TAAndOrRadioButtonDelegate? Delegate { get; set; }
         public TAAndOrRadioButton()
         {
             InitializeComponent();
             this.condition = Conditional.AND;
+            this.Delegate = null;
         }
 
         private void ANDButton_Click(object sender, RoutedEventArgs e)
         {
             condition = Conditional.AND;
-            ORButton.Background = new SolidColorBrush(Color.FromArgb(100, 181, 181, 181));
+            ORButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 255, 255, 255));
+            ANDButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 239, 35, 60));
         }
 
         private void ORButton_Click(object sender, RoutedEventArgs e)
         {
             condition = Conditional.OR;
-            ANDButton.Background = new SolidColorBrush(Color.FromArgb(100, 181, 181, 181));
+            ANDButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 255, 255, 255));
+            ORButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 239, 35, 60));
+        }
+
+        private void AddButton_Click(object sender, RoutedEventArgs e)
+        {
+            Delegate?.addButtonPressed();
         }
     }
 }

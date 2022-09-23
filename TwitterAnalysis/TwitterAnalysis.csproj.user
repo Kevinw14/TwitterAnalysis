@@ -10,12 +10,18 @@
     <Compile Update="TAAndOrRadioButton.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="TweetSearchWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TAAndOrRadioButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TweetSearchWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

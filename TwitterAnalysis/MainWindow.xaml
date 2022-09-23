@@ -7,15 +7,5 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Grid>
-            <DataGrid x:Name="TweetsTable" Margin="0,66,0,0" IsReadOnly="True" ItemsSource="{Binding Source=TweetResponse}">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Text" Binding="{Binding Text}"/>
-                    <DataGridTextColumn Header="Id" Binding="{Binding Id}" Visibility="Hidden"/>
-                </DataGrid.Columns>
-            </DataGrid>
-            <Button x:Name="SearchButton" Content="Search" HorizontalAlignment="Left" Margin="437,25,0,0" VerticalAlignment="Top" Click="SearchButton_Click"/>
-            <TextBox x:Name="SearchTextBox" HorizontalAlignment="Left" Margin="50,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="337"/>
-        </Grid>
     </Grid>
 </Window>

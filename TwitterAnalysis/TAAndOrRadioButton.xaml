@@ -3,12 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:TwitterAnalysis"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
-        <Button x:Name="ANDButton" Content="AND" HorizontalAlignment="Left" Margin="165,108,0,0" VerticalAlignment="Top" Width="50" Click="ANDButton_Click"/>
-        <Button x:Name="ORButton" Content="OR" HorizontalAlignment="Left" Margin="215,108,0,0" VerticalAlignment="Top" Width="50" Click="ORButton_Click" Background="#FFB5B5B5"/>
-
-    </Grid>
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             mc:Ignorable="d">
+    <StackPanel Orientation="Horizontal">
+        <Button x:Name="ANDButton" Content="AND" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" Height="30" Width="50" Click="ANDButton_Click" Background="#ef233c"/>
+        <Button x:Name="ORButton" Content="OR" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Center" Height="30" Width="50" Click="ORButton_Click" Background="#FFFFFF"/>
+        <Button x:Name="AddButton" fa:Awesome.Content="Plus"  Width="30" Height="30" Margin="10,0,0,0" HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome" Click="AddButton_Click"/>
+    </StackPanel>
 </UserControl>
