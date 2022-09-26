@@ -5,13 +5,25 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TwitterAnalysis"
         mc:Ignorable="d"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         Title="TweetSearchWindow" Height="450" Width="800">
     <ScrollViewer>
-        <Grid x:Name="QueryGrid">
+        <Grid x:Name="QueryGrid" Margin="10,5,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
-            <local:TAAndOrRadioButton Grid.Column="0" Grid.Row="0" x:Name="AndOrRadioButton"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Orientation="Horizontal">
+                <ComboBox x:Name="QueryParamsComboBox" HorizontalAlignment="Left" VerticalAlignment="Center">
+                    <ComboBoxItem IsSelected="True" Content="Query"></ComboBoxItem>
+                    <ComboBoxItem Content="Start Time"></ComboBoxItem>
+                    <ComboBoxItem Content="End Time"></ComboBoxItem>
+                </ComboBox>
+                <Button Width="30" Margin="10,0,0,0" fa:Awesome.Content="Plus" 
+        TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome" Name="AddButton" Click="AddButton_Click"/>
+            </StackPanel>
         </Grid>
     </ScrollViewer>
 </Window>

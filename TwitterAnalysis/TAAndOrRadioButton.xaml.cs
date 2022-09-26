@@ -4,10 +4,6 @@ using System.Windows.Media;
 
 namespace TwitterAnalysis
 {
-    public interface TAAndOrRadioButtonDelegate
-    {
-        void addButtonPressed();
-    }
     public enum Conditional
     {
         AND,
@@ -21,13 +17,10 @@ namespace TwitterAnalysis
         {
             get { return condition; }
         }
-
-        public TAAndOrRadioButtonDelegate? Delegate { get; set; }
         public TAAndOrRadioButton()
         {
             InitializeComponent();
             this.condition = Conditional.AND;
-            this.Delegate = null;
         }
 
         private void ANDButton_Click(object sender, RoutedEventArgs e)
@@ -42,11 +35,6 @@ namespace TwitterAnalysis
             condition = Conditional.OR;
             ANDButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 255, 255, 255));
             ORButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 239, 35, 60));
-        }
-
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
-            Delegate?.addButtonPressed();
         }
     }
 }

@@ -25,6 +25,7 @@ C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windo
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\TwitterAnalysis.genruntimeconfig.cache
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\ref\TwitterAnalysis.dll
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\bin\Debug\net6.0-windows\FontAwesome.WPF.dll
-C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\TweetSearchWindow.g.cs
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\TweetSearchWindow.baml
+C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\CalendarButton.g.cs
+C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\CalendarButton.baml
