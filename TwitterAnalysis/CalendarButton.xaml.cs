@@ -25,7 +25,7 @@ namespace TwitterAnalysis
         public CalendarButton(string Label)
         {
             InitializeComponent();
-            this.is_open = false;
+            is_open = false;
             CalendarDateRange StartBlackOutDateRange = new CalendarDateRange();
             CalendarDateRange EndBlackOutDateRange = new CalendarDateRange();
             StartBlackOutDateRange.End = new DateTime(2006, 3, 20);

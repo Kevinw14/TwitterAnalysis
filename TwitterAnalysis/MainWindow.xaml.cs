@@ -8,12 +8,13 @@ namespace TwitterAnalysis
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindow : Window, TweetSearchWindowDelegate
     {
         public MainWindow()
         {
             InitializeComponent();
             TweetSearchWindow Window = new TweetSearchWindow();
+            Window.Delegate = this;
             Window.Show();
         }
 

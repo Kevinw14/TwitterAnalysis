@@ -18,8 +18,14 @@ namespace TwitterAnalysis
     /// <summary>
     /// Interaction logic for TweetSearchWindow.xaml
     /// </summary>
+    /// 
+    public interface TweetSearchWindowDelegate
+    {
+
+    }
     public partial class TweetSearchWindow : Window
     {
+        public TweetSearchWindowDelegate? Delegate { get; set; }
         public TweetSearchWindow()
         {
             InitializeComponent();
