@@ -19,9 +19,15 @@ namespace TwitterAnalysis
     /// <summary>
     /// Interaction logic for CalendarButton.xaml
     /// </summary>
+    /// 
+    public interface CalendarButtonDelegate
+    {
+        public void CalendarButtonDeletePressed(CalendarButton CalendarButton);
+    }
     public partial class CalendarButton : UserControl
     {
         private bool is_open;
+        public CalendarButtonDelegate? Delegate { get; set; }
         public CalendarButton(string Label)
         {
             InitializeComponent();
@@ -32,7 +38,7 @@ namespace TwitterAnalysis
             EndBlackOutDateRange.Start = DateTime.Today.AddDays(1);
             Calendar.BlackoutDates.Add(StartBlackOutDateRange);
             Calendar.BlackoutDates.Add(EndBlackOutDateRange);
-            SelectDateLabel.Content = Label;
+            DescriptionLabel.Content = Label;
         }
 
         private void PopupCalendar_SelectedDatesChanged(object sender, SelectionChangedEventArgs e)
@@ -48,6 +54,11 @@ namespace TwitterAnalysis
         {
             is_open = !is_open;
             CalendarPopUp.IsOpen = is_open;
+        }
+
+        private void DeleteButton_Click(object sender, RoutedEventArgs e)
+        {
+            Delegate?.CalendarButtonDeletePressed(this);
         }
     }
 }

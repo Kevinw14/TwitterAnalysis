@@ -94,7 +94,7 @@
       ]
     },
     "TwitterAPI/1.0.0": {
-      "sha512": "SB7j7w3L5cFiMCKEnc94aKEVWPX9x5Y+dCelNVogqXVIeESg1/wvQB+GGSi5Zt3IkWwRCNja5eOfQHnKBcT4IQ==",
+      "sha512": "ZRkfvAXLJDlLJ9GjJYLpLWBCpVJ/ZJZXcJg1qaNfiPqcw0jIEcbHaR+R4F06c1XUmjuSYJGXw197yD2Fa7RGeA==",
       "type": "package",
       "path": "twitterapi/1.0.0",
       "files": [
@@ -133,8 +133,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\smartlab\\Desktop\\TwitterAPIPublished": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "C:\\Users\\smartlab\\Desktop\\TwitterAPIPublished": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
@@ -184,7 +183,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   },

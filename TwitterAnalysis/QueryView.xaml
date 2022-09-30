@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="TwitterAnalysis.QueryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TwitterAnalysis"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
+             mc:Ignorable="d">
+    <StackPanel Orientation="Horizontal">
+        <local:TAAndOrRadioButton x:Name="AndOrRadioButton"/>
+        <TextBox x:Name="QueryTextBox" Width="300"/>
+        <CheckBox Content="Exact Phrase Match" VerticalAlignment="Center"/>
+        <Button Width="30" Margin="10,0,0,0" fa:Awesome.Content="Trash" TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome" x:Name="DeleteButton" Click="DeleteButton_Click" />
+    </StackPanel>
+</UserControl>

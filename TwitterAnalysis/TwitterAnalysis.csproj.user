@@ -10,6 +10,9 @@
     <Compile Update="CalendarButton.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="QueryView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="TAAndOrRadioButton.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -22,6 +25,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="QueryView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="TAAndOrRadioButton.xaml">

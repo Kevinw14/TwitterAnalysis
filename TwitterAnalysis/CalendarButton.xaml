@@ -4,20 +4,25 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:TwitterAnalysis"
+             xmlns:fa="http://schemas.fontawesome.io/icons/"
              mc:Ignorable="d">
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"></ColumnDefinition>
-            <ColumnDefinition Width="auto"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
-        </Grid.RowDefinitions>
-        <Label x:Name="SelectDateLabel" Grid.Row="0" Grid.Column="0"/>
-        <Button x:Name="SelectDateButton" Width="100" Grid.Column="0" Grid.Row="1" Content="Select Date" Click="SelectDateButton_Click"/>
-        <Popup x:Name="CalendarPopUp">
-            <Calendar x:Name="Calendar" SelectedDatesChanged="PopupCalendar_SelectedDatesChanged"></Calendar>
-        </Popup>
-    </Grid>
+    <UserControl.Resources>
+        <Style TargetType="Popup">
+            <Style.Triggers>
+                <Trigger Property="IsOpen" Value="True">
+                    <Setter Property="HorizontalOffset" Value="10"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+    <StackPanel Orientation="Vertical">
+        <Label x:Name="DescriptionLabel"/>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="SelectDateButton" Width="100" Content="Select Date" Click="SelectDateButton_Click"/>
+            <Popup x:Name="CalendarPopUp" Margin="10" PlacementTarget="{Binding ElementName=SelectDateButton}" Placement="Right">
+                <Calendar x:Name="Calendar" SelectedDatesChanged="PopupCalendar_SelectedDatesChanged"></Calendar>
+            </Popup>
+            <Button Width="30" Margin="10,0,0,0" fa:Awesome.Content="Trash" TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome" x:Name="DeleteButton" Click="DeleteButton_Click" />
+        </StackPanel>
+    </StackPanel>
 </UserControl>
