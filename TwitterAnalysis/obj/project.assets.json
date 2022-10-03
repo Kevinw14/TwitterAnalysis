@@ -28,7 +28,7 @@
           }
         }
       },
-      "TwitterAPI/1.0.0": {
+      "TwitterAPI/1.0.0.12": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1"
@@ -93,14 +93,14 @@
         "packageIcon.png"
       ]
     },
-    "TwitterAPI/1.0.0": {
-      "sha512": "ZRkfvAXLJDlLJ9GjJYLpLWBCpVJ/ZJZXcJg1qaNfiPqcw0jIEcbHaR+R4F06c1XUmjuSYJGXw197yD2Fa7RGeA==",
+    "TwitterAPI/1.0.0.12": {
+      "sha512": "zpk5Ggnl0QguVbYTNvbVeIRlMXzF/fBFV4fsGIN6ngTBlhWDWSBPBUSvnkMZu+Z9bleQ3oazHrZLNx0FyJ1pqg==",
       "type": "package",
-      "path": "twitterapi/1.0.0",
+      "path": "twitterapi/1.0.0.12",
       "files": [
         ".nupkg.metadata",
         "lib/netstandard2.1/TwitterAPI.dll",
-        "twitterapi.1.0.0.nupkg.sha512",
+        "twitterapi.1.0.0.12.nupkg.sha512",
         "twitterapi.nuspec"
       ]
     }
@@ -109,7 +109,7 @@
     "net6.0-windows7.0": [
       "FontAwesome.WPF >= 4.7.0.9",
       "Newtonsoft.Json >= 13.0.1",
-      "TwitterAPI >= 1.0.0"
+      "TwitterAPI >= 1.0.0.12"
     ]
   },
   "packageFolders": {
@@ -133,7 +133,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Users\\smartlab\\Desktop\\TwitterAPIPublished": {}
+        "C:\\Users\\smartlab\\Desktop\\TwitterAPI\\TwitterAPI\\bin\\Release\\netstandard2.1\\publish": {},
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0-windows7.0": {
@@ -161,7 +162,7 @@
           },
           "TwitterAPI": {
             "target": "Package",
-            "version": "[1.0.0, )"
+            "version": "[1.0.0.12, )"
           }
         },
         "imports": [
@@ -183,7 +184,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   },

@@ -27,9 +27,9 @@ namespace TwitterAnalysis
     public partial class TweetSearchWindow : Window, CalendarButtonDelegate, QueryViewDelegate
     {
         public TweetSearchWindowDelegate? Delegate { get; set; }
+        DateTime? start_time;
+        DateTime? end_time;
         private Grid query_grid;
-        private DateTime? start_time;
-        private DateTime? end_time;
         public TweetSearchWindow()
         {
             InitializeComponent();
@@ -39,7 +39,9 @@ namespace TwitterAnalysis
             query_grid = new Grid();
             query_grid.Margin = new Thickness(10, 0, 0, 0);
             ParamGrid.Children.Add(query_grid);
-            Grid.SetRow(query_grid, ParamGrid.RowDefinitions.Count - 1);
+            Grid.SetRow(query_grid, 1);
+
+
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -74,7 +76,7 @@ namespace TwitterAnalysis
                     CalendarButton StartCalendarButton = new CalendarButton("Start Time");
                     StartCalendarButton.Delegate = this;
                     ParamGrid.Children.Add(StartCalendarButton);
-                    Grid.SetRow(StartCalendarButton, ParamGrid.RowDefinitions.Count - 2);
+                    Grid.SetRow(StartCalendarButton, 2);
                     break;
                 case "End Time":
                     ParamsComboBox.Items.Remove(SelectedItem);
@@ -85,16 +87,10 @@ namespace TwitterAnalysis
                     CalendarButton EndCalendarButton = new CalendarButton("End Time");
                     EndCalendarButton.Delegate = this;
                     ParamGrid.Children.Add(EndCalendarButton);
-                    Grid.SetRow(EndCalendarButton, ParamGrid.RowDefinitions.Count - 2);
+                    Grid.SetRow(EndCalendarButton, 3);
                     break;
                 default: break;
             }
-        }
-
-        private void Calendar_DateChanged(object sender, SelectionChangedEventArgs e)
-        {
-            Calendar Calendar = (Calendar)sender;
-            DateTime? Date = Calendar.SelectedDate;
         }
 
         public void CalendarButtonDeletePressed(CalendarButton CalendarButton)
@@ -105,6 +101,16 @@ namespace TwitterAnalysis
             ParamsComboBox.Items.Add(Item);
         }
 
+        public void CalendarButtonDateChanged(CalendarButton CalendarButton)
+        {
+            if (CalendarButton.DescriptionLabel.Content.Equals("Start Time"))
+            {
+                this.start_time = CalendarButton.Calendar.SelectedDate;
+            } else if (CalendarButton.DescriptionLabel.Content.Equals("End Time"))
+            {
+                this.end_time = CalendarButton.Calendar.SelectedDate;
+            }
+        }
         public void QueryViewDeleteButtonPressed(QueryView QueryView)
         {
             query_grid.Children.Remove(QueryView);
@@ -119,15 +125,16 @@ namespace TwitterAnalysis
         private void ExecuteButton_Click(object sender, RoutedEventArgs e)
         {
             List<TweetSearchQuery> search_queries = new List<TweetSearchQuery>();
-            for(int i = 0; i < query_grid.Children.Count; i++)
+            for (int i = 0; i < query_grid.Children.Count; i++)
             {
                 QueryView query_view = (QueryView)query_grid.Children[i];
                 string query = query_view.QueryTextBox.Text;
-                TweetSearchQuery search_query = new TweetSearchQuery(query);
+                TweetSearchQuery search_query = new TweetSearchQuery(query, query_view.ExactPhraseCheckBox.IsChecked, query_view.AndOrRadioButton.Conditional, new List<TweetFilter>());
                 search_queries.Add(search_query);
             }
 
             TweetSearchRequest SearchRequest = new TweetSearchRequest();
+            SearchRequest.Queries = search_queries;
             SearchRequest.StartTime = start_time;
             SearchRequest.EndTime = end_time;
             Delegate?.TweetSearchWindowExecuteButtonPressed(SearchRequest);

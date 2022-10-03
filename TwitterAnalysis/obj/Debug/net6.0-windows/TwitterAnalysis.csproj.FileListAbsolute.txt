@@ -1,6 +1,3 @@
-C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\bin\Debug\net6.0-windows\TwitterAnalysis.exe
-C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\bin\Debug\net6.0-windows\TwitterAnalysis.dll
-C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\bin\Debug\net6.0-windows\FontAwesome.WPF.dll
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\TwitterAnalysis.csproj.AssemblyReference.cache
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\TAAndOrRadioButton.baml
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\CalendarButton.g.cs
@@ -12,9 +9,12 @@ C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windo
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\TwitterAnalysis_MarkupCompile.cache
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\TwitterAnalysis_MarkupCompile.lref
+C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\bin\Debug\net6.0-windows\TwitterAnalysis.exe
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\bin\Debug\net6.0-windows\TwitterAnalysis.deps.json
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\bin\Debug\net6.0-windows\TwitterAnalysis.runtimeconfig.json
+C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\bin\Debug\net6.0-windows\TwitterAnalysis.dll
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\bin\Debug\net6.0-windows\TwitterAnalysis.pdb
+C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\bin\Debug\net6.0-windows\FontAwesome.WPF.dll
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\bin\Debug\net6.0-windows\TwitterAPI.dll
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\obj\Debug\net6.0-windows\CalendarButton.baml

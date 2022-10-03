@@ -22,7 +22,8 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Users\\smartlab\\Desktop\\TwitterAPIPublished": {}
+          "C:\\Users\\smartlab\\Desktop\\TwitterAPI\\TwitterAPI\\bin\\Release\\netstandard2.1\\publish": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
@@ -50,7 +51,7 @@
             },
             "TwitterAPI": {
               "target": "Package",
-              "version": "[1.0.0, )"
+              "version": "[1.0.0.12, )"
             }
           },
           "imports": [
@@ -72,7 +73,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

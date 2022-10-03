@@ -23,6 +23,7 @@ namespace TwitterAnalysis
     public interface CalendarButtonDelegate
     {
         public void CalendarButtonDeletePressed(CalendarButton CalendarButton);
+        public void CalendarButtonDateChanged(CalendarButton CalendarButton);
     }
     public partial class CalendarButton : UserControl
     {
@@ -47,6 +48,7 @@ namespace TwitterAnalysis
             CalendarPopUp.IsOpen = false;
             DateTime? SelectedDate = Calendar.SelectedDate;
             SelectDateButton.Content = SelectedDate?.ToString("MMM-dd-yyyy");
+            Delegate?.CalendarButtonDateChanged(this);
             is_open = false;
         }
 

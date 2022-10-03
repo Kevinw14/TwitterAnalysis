@@ -12,6 +12,8 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"></RowDefinition>
                 <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
+                <RowDefinition Height="auto"></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto"></ColumnDefinition>
@@ -24,7 +26,7 @@
                 </ComboBox>
                 <Button Width="30" Margin="10,0,0,0" fa:Awesome.Content="Plus" TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome" Name="AddButton" Click="AddButton_Click"/>
             </StackPanel>
-            <Button x:Name="ExecuteButton" Grid.Column="0" Grid.Row="1" Content="Execute" Click="ExecuteButton_Click"/>
+            <Button x:Name="ExecuteButton" Grid.Column="0" Grid.Row="4" Content="Execute" Click="ExecuteButton_Click"/>
         </Grid>
     </ScrollViewer>
 </Window>

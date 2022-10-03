@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using TwitterAPI;
 
 namespace TwitterAnalysis
 {
@@ -11,28 +12,28 @@ namespace TwitterAnalysis
     }
     public partial class TAAndOrRadioButton : UserControl
     {
-        private Conditional condition;
+        private TweetConditional conditional;
 
-        public Conditional Conditional
+        public TweetConditional Conditional
         {
-            get { return condition; }
+            get { return conditional; }
         }
         public TAAndOrRadioButton()
         {
             InitializeComponent();
-            this.condition = Conditional.AND;
+            this.conditional = TweetConditional.AND;
         }
 
         private void ANDButton_Click(object sender, RoutedEventArgs e)
         {
-            condition = Conditional.AND;
+            conditional = TweetConditional.AND;
             ORButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 255, 255, 255));
             ANDButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 239, 35, 60));
         }
 
         private void ORButton_Click(object sender, RoutedEventArgs e)
         {
-            condition = Conditional.OR;
+            conditional = TweetConditional.OR;
             ANDButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 255, 255, 255));
             ORButton.Background = new SolidColorBrush(System.Windows.Media.Color.FromArgb(255, 239, 35, 60));
         }

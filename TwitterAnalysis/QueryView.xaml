@@ -9,7 +9,7 @@
     <StackPanel Orientation="Horizontal">
         <local:TAAndOrRadioButton x:Name="AndOrRadioButton"/>
         <TextBox x:Name="QueryTextBox" Width="300"/>
-        <CheckBox Content="Exact Phrase Match" VerticalAlignment="Center"/>
+        <CheckBox x:Name="ExactPhraseCheckBox" Content="Exact Phrase Match" VerticalAlignment="Center"/>
         <Button Width="30" Margin="10,0,0,0" fa:Awesome.Content="Trash" TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome" x:Name="DeleteButton" Click="DeleteButton_Click" />
     </StackPanel>
 </UserControl>
