@@ -14,10 +14,7 @@ namespace TwitterAnalysis
     {
         private TweetConditional conditional;
 
-        public TweetConditional Conditional
-        {
-            get { return conditional; }
-        }
+        public TweetConditional Conditional { get; set; }
         public TAAndOrRadioButton()
         {
             InitializeComponent();

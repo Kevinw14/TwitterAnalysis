@@ -119,6 +119,7 @@ namespace TwitterAnalysis
             {
                 QueryView first_query_view = (QueryView)query_grid.Children[0];
                 first_query_view.AndOrRadioButton.IsEnabled = false;
+                first_query_view.AndOrRadioButton.Conditional = TweetConditional.AND;
             }
         }
 
@@ -139,6 +140,22 @@ namespace TwitterAnalysis
             SearchRequest.EndTime = end_time;
             Delegate?.TweetSearchWindowExecuteButtonPressed(SearchRequest);
             this.Close();
+        }
+
+        public void QueryViewDidStartTyping(string text)
+        {
+            for(int i = 0; i < query_grid.Children.Count; i++)
+            {
+                QueryView query_view = (QueryView)query_grid.Children[i];
+                if (!query_view.QueryTextBox.Text.Equals(""))
+                {
+                    ExecuteButton.IsEnabled = true;
+                    break;
+                } else
+                {
+                    ExecuteButton.IsEnabled = false;
+                }
+            }
         }
     }
 }

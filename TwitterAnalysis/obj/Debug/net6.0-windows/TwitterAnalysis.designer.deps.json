@@ -22,14 +22,14 @@
           }
         }
       },
-      "TwitterAPI/1.0.0.11": {
+      "TwitterAPI/1.0.0.13": {
         "dependencies": {
           "Newtonsoft.Json": "13.0.1"
         },
         "runtime": {
           "lib/netstandard2.1/TwitterAPI.dll": {
-            "assemblyVersion": "1.0.0.11",
-            "fileVersion": "1.0.0.11"
+            "assemblyVersion": "1.0.0.13",
+            "fileVersion": "1.0.0.13"
           }
         }
       }
@@ -50,12 +50,12 @@
       "path": "newtonsoft.json/13.0.1",
       "hashPath": "newtonsoft.json.13.0.1.nupkg.sha512"
     },
-    "TwitterAPI/1.0.0.11": {
+    "TwitterAPI/1.0.0.13": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OSTLfMVdO3tpsV573P76eOSgle/VHQEF6v/9Q1vrprNFgVoI3HXGMXoG5T2u4RLs00ey8ovmmHGfXPtjgSac3Q==",
-      "path": "twitterapi/1.0.0.11",
-      "hashPath": "twitterapi.1.0.0.11.nupkg.sha512"
+      "sha512": "sha512-Nfe1HslthClAYTvBOXsMrAtFxk+ptqWi8ZT/LivP+D03VMxD2EEQ4zuvMiO3Vf9bbijUpeNOW86rkW3Byw8wFg==",
+      "path": "twitterapi/1.0.0.13",
+      "hashPath": "twitterapi.1.0.0.13.nupkg.sha512"
     }
   }
 }

@@ -22,6 +22,7 @@ namespace TwitterAnalysis
     public interface QueryViewDelegate
     {
         public void QueryViewDeleteButtonPressed(QueryView QueryView);
+        public void QueryViewDidStartTyping(string text);
     }
     public partial class QueryView : UserControl
     {
@@ -30,8 +31,13 @@ namespace TwitterAnalysis
         public QueryView()
         {
             InitializeComponent();
+            QueryTextBox.TextChanged += QueryTextBoxTextChanged;
         }
 
+        private void QueryTextBoxTextChanged(object sender, TextChangedEventArgs e)
+        {
+            Delegate?.QueryViewDidStartTyping(QueryTextBox.Text);
+        }
         private void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
             Delegate?.QueryViewDeleteButtonPressed(this);

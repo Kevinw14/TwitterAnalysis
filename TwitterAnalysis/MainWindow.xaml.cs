@@ -22,19 +22,15 @@ namespace TwitterAnalysis
         {
             TwitterClient Client = new TwitterClient(Environment.GetEnvironmentVariable("BEARER_TOKEN"));
             MessageBox.Show(Client.TweetSearchURL(TweetSearchRequest));
-            //try
-            //{
-            //    APIResponse<TweetSearchData> SearchResponse = await Client.SearchTweets(TweetSearchRequest);
-            //    for (int i = 0; i < SearchResponse.Data.Data.Count; i++)
-            //    {
-            //        Tweet Tweet = SearchResponse.Data.Data[i];
-            //        MessageBox.Show(Tweet.Text);
-            //    }
-            //}
-            //catch (Exception e)
-            //{
-            //    MessageBox.Show(e.Message);
-            //}
+            try
+            {
+                APIResponse<TweetSearchData> SearchResponse = await Client.SearchTweets(TweetSearchRequest);
+                TweetDataGrid.ItemsSource = SearchResponse.Data.Data;
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
     }
 }
