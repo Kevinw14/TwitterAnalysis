@@ -2,6 +2,8 @@
 using System.Windows;
 using TwitterAPI;
 using System.Collections.Generic;
+using System.Data;
+using System.Windows.Controls;
 
 namespace TwitterAnalysis
 {
@@ -16,6 +18,8 @@ namespace TwitterAnalysis
             TweetSearchWindow Window = new TweetSearchWindow();
             Window.Delegate = this;
             Window.Show();
+
+
         }
 
         public async void TweetSearchWindowExecuteButtonPressed(TweetSearchRequest TweetSearchRequest)

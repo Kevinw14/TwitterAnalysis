@@ -17,6 +17,15 @@
         <Grid x:Name="SentimentControlGrid" Grid.Column="0" Grid.Row="0">
             
         </Grid>
-        <DataGrid x:Name="TweetDataGrid" Grid.Column="0" Grid.Row="1"/>
+        <DataGrid x:Name="TweetDataGrid" Grid.Column="0" Grid.Row="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Text"/>
+                <DataGridTextColumn Header="Username"/>
+            </DataGrid.Columns>
+            <DataGrid.CellStyle>
+                <Style/>
+            </DataGrid.CellStyle>
+        </DataGrid>
+        <local:TAAndOrRadioButton HorizontalAlignment="Left" Margin="1029,166,0,0" Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 </Window>
