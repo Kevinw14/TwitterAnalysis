@@ -12,20 +12,19 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
-            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <Grid x:Name="SentimentControlGrid" Grid.Column="0" Grid.Row="0">
-            
-        </Grid>
-        <DataGrid x:Name="TweetDataGrid" Grid.Column="0" Grid.Row="1">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Text"/>
-                <DataGridTextColumn Header="Username"/>
-            </DataGrid.Columns>
-            <DataGrid.CellStyle>
-                <Style/>
-            </DataGrid.CellStyle>
+        <Menu Grid.Column="0" Grid.Row="0">
+            <MenuItem Header="_Import">
+                <MenuItem Header="Add Token" x:Name="Token_Menu_Item" Click="Token_Menu_Item_Click"/>
+            </MenuItem>
+            <MenuItem Header="_Search">
+                <MenuItem Header="_Tweet Search" x:Name="Search_Menu_Item" Click="Search_Menu_Item_Click"/>
+            </MenuItem>
+        </Menu>
+        <Grid x:Name="SentimentControlGrid" Grid.Column="0" Grid.Row="1"></Grid>
+        <DataGrid x:Name="TweetDataGrid" Grid.Column="0" Grid.Row="2">
         </DataGrid>
-        <local:TAAndOrRadioButton HorizontalAlignment="Left" Margin="1029,166,0,0" Grid.Row="1" VerticalAlignment="Top"/>
     </Grid>
 </Window>

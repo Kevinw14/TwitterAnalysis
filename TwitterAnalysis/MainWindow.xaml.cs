@@ -15,17 +15,11 @@ namespace TwitterAnalysis
         public MainWindow()
         {
             InitializeComponent();
-            TweetSearchWindow Window = new TweetSearchWindow();
-            Window.Delegate = this;
-            Window.Show();
-
-
         }
 
         public async void TweetSearchWindowExecuteButtonPressed(TweetSearchRequest TweetSearchRequest)
         {
             TwitterClient Client = new TwitterClient(Environment.GetEnvironmentVariable("BEARER_TOKEN"));
-            MessageBox.Show(Client.TweetSearchURL(TweetSearchRequest));
             try
             {
                 APIResponse<TweetSearchData> SearchResponse = await Client.SearchTweets(TweetSearchRequest);
@@ -35,6 +29,18 @@ namespace TwitterAnalysis
             {
                 MessageBox.Show(e.Message);
             }
+        }
+
+        private void Search_Menu_Item_Click(object sender, RoutedEventArgs e)
+        {
+            TweetSearchWindow TweetSearchWindow = new TweetSearchWindow();
+            TweetSearchWindow.Delegate = this;
+            TweetSearchWindow.Show();
+        }
+
+        private void Token_Menu_Item_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
