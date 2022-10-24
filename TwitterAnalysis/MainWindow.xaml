@@ -13,18 +13,28 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="auto"/>
             <RowDefinition Height="auto"/>
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Menu Grid.Column="0" Grid.Row="0">
-            <MenuItem Header="_Import">
-                <MenuItem Header="Add Token" x:Name="Token_Menu_Item" Click="Token_Menu_Item_Click"/>
-            </MenuItem>
             <MenuItem Header="_Search">
                 <MenuItem Header="_Tweet Search" x:Name="Search_Menu_Item" Click="Search_Menu_Item_Click"/>
             </MenuItem>
         </Menu>
-        <Grid x:Name="SentimentControlGrid" Grid.Column="0" Grid.Row="1"></Grid>
-        <DataGrid x:Name="TweetDataGrid" Grid.Column="0" Grid.Row="2">
-        </DataGrid>
+        <Grid x:Name="SentimentControlGrid" Grid.Column="0" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <GroupBox Grid.Column="0">
+                <StackPanel>
+                    <RadioButton x:Name="SentimentAnalysisRadioButton" IsChecked="True">Sentiment Analysis</RadioButton>
+                    <Button x:Name="ExecuteButton" Click="ExecuteButton_Click">Execute</Button>
+                </StackPanel>
+            </GroupBox>
+        </Grid>
+        <ScrollViewer x:Name="TweetDataScroller" Grid.Column="0" Grid.Row="2">
+            <Label>Hello</Label>
+        </ScrollViewer>
     </Grid>
 </Window>

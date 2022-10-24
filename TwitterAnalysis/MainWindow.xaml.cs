@@ -23,7 +23,6 @@ namespace TwitterAnalysis
             try
             {
                 APIResponse<TweetSearchData> SearchResponse = await Client.SearchTweets(TweetSearchRequest);
-                TweetDataGrid.ItemsSource = SearchResponse.Data.Data;
             }
             catch (Exception e)
             {
@@ -41,6 +40,14 @@ namespace TwitterAnalysis
         private void Token_Menu_Item_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ExecuteButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (SentimentAnalysisRadioButton.IsChecked == true)
+            {
+                MessageBox.Show("Sentiment Analysis Executing");
+            }
         }
     }
 }

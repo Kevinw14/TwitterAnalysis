@@ -28,7 +28,7 @@
           }
         }
       },
-      "TwitterAPI/1.0.0.14": {
+      "TwitterAPI/1.0.0.15": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1"
@@ -93,14 +93,14 @@
         "packageIcon.png"
       ]
     },
-    "TwitterAPI/1.0.0.14": {
-      "sha512": "bxMwrpE4zNMhJ4rgcAO/AMqxuCxF+RvHtg7sGPF0+BB2MpuHV5p7vXZcMP/YLY6UOwwiAvwo4KJ7cmJ7rgLXvQ==",
+    "TwitterAPI/1.0.0.15": {
+      "sha512": "YSQkXFnblGs7Wt3yOo5orz0wWY0Vc9kvbvAx0zzx/lwTqN0moaqNWVmPURpJaOZ1gslQg7OTGtflmDI3d/yBog==",
       "type": "package",
-      "path": "twitterapi/1.0.0.14",
+      "path": "twitterapi/1.0.0.15",
       "files": [
         ".nupkg.metadata",
         "lib/netstandard2.1/TwitterAPI.dll",
-        "twitterapi.1.0.0.14.nupkg.sha512",
+        "twitterapi.1.0.0.15.nupkg.sha512",
         "twitterapi.nuspec"
       ]
     }
@@ -109,7 +109,7 @@
     "net6.0-windows7.0": [
       "FontAwesome.WPF >= 4.7.0.9",
       "Newtonsoft.Json >= 13.0.1",
-      "TwitterAPI >= 1.0.0.14"
+      "TwitterAPI >= 1.0.0.15"
     ]
   },
   "packageFolders": {
@@ -129,7 +129,7 @@
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net6.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -138,7 +138,7 @@
       },
       "frameworks": {
         "net6.0-windows7.0": {
-          "targetAlias": "net6.0-windows",
+          "targetAlias": "net6.0-windows7.0",
           "projectReferences": {}
         }
       },
@@ -150,7 +150,7 @@
     },
     "frameworks": {
       "net6.0-windows7.0": {
-        "targetAlias": "net6.0-windows",
+        "targetAlias": "net6.0-windows7.0",
         "dependencies": {
           "FontAwesome.WPF": {
             "target": "Package",
@@ -162,7 +162,7 @@
           },
           "TwitterAPI": {
             "target": "Package",
-            "version": "[1.0.0.14, )"
+            "version": "[1.0.0.15, )"
           }
         },
         "imports": [

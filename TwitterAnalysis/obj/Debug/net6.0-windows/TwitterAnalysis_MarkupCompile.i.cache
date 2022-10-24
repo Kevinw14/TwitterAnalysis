@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\smartlab\Desktop\TwitterAnalysis\TwitterAnalysis\App.xaml
-5-580050542
+6-132211017
 
-91463469925
+102122395105
 1971993282068
-CalendarButton.xaml;MainWindow.xaml;QueryView.xaml;TAAndOrRadioButton.xaml;TweetSearchWindow.xaml;
+CalendarButton.xaml;MainWindow.xaml;MaxResultView.xaml;QueryView.xaml;TAAndOrRadioButton.xaml;TweetSearchWindow.xaml;
 
-False
+True
 

@@ -21,8 +21,9 @@
             <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
                 <ComboBox x:Name="ParamsComboBox" HorizontalAlignment="Left" VerticalAlignment="Center">
                     <ComboBoxItem IsSelected="True" Content="Query"></ComboBoxItem>
-                    <ComboBoxItem Content="Start Time"></ComboBoxItem>
-                    <ComboBoxItem Content="End Time"></ComboBoxItem>
+                    <ComboBoxItem Content="Start Time"/>
+                    <ComboBoxItem Content="End Time"/>
+                    <ComboBoxItem Content="Max Results" />
                 </ComboBox>
                 <Button Width="30" Margin="10,0,0,0" fa:Awesome.Content="Plus" TextElement.FontFamily="pack://application:,,,/FontAwesome.WPF;component/#FontAwesome" Name="AddButton" Click="AddButton_Click"/>
             </StackPanel>
