@@ -16,7 +16,13 @@
     <Compile Update="TAAndOrRadioButton.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="TableView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="TweetSearchWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="TweetTableViewCell.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -33,7 +39,13 @@
     <Page Update="TAAndOrRadioButton.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="TableView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="TweetSearchWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="TweetTableViewCell.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

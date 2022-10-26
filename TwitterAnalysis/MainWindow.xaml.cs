@@ -10,8 +10,9 @@ namespace TwitterAnalysis
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window, TweetSearchWindowDelegate
+    public partial class MainWindow : Window, TweetSearchWindowDelegate, TableViewDatasource
     {
+        private TweetSearchData TweetSearchData;
         public MainWindow()
         {
             InitializeComponent();
@@ -23,6 +24,10 @@ namespace TwitterAnalysis
             try
             {
                 APIResponse<TweetSearchData> SearchResponse = await Client.SearchTweets(TweetSearchRequest);
+                TweetTableView.Datasource = this;
+                this.TweetSearchData = SearchResponse.Data;
+                MessageBox.Show(SearchResponse.Data.Includes.Users.Count.ToString());
+                TweetTableView.Refresh();
             }
             catch (Exception e)
             {
@@ -30,16 +35,26 @@ namespace TwitterAnalysis
             }
         }
 
+        public int NumberOfRows()
+        {
+            return TweetSearchData.Data.Count;
+        }
+
+        public TableViewCell TableViewCellAtIndexPath(IndexPath IndexPath)
+        {
+            Tweet Tweet = TweetSearchData.Data[IndexPath.Row];
+            //User User = TweetSearchData.Includes.Users[IndexPath.Row];
+            TweetTableViewCell Cell = new TweetTableViewCell(IndexPath);
+            Cell.TweetLabel.Text = Tweet.Text;
+            //Cell.UsernameLabel.Content = User.Username;
+            return Cell;
+
+        }
         private void Search_Menu_Item_Click(object sender, RoutedEventArgs e)
         {
             TweetSearchWindow TweetSearchWindow = new TweetSearchWindow();
             TweetSearchWindow.Delegate = this;
             TweetSearchWindow.Show();
-        }
-
-        private void Token_Menu_Item_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void ExecuteButton_Click(object sender, RoutedEventArgs e)
