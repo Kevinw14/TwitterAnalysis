@@ -135,6 +135,9 @@ namespace TwitterAnalysis
             SearchRequest.Queries = search_queries;
             SearchRequest.StartTime = start_time;
             SearchRequest.EndTime = end_time;
+            SearchRequest.Expansions.Add(Expansion.AUTHOR_ID);
+            SearchRequest.UserFields.Add(UserField.USERNAME);
+            SearchRequest.UserFields.Add(UserField.VERIFIED);
             Delegate?.TweetSearchWindowExecuteButtonPressed(SearchRequest);
             this.Close();
         }

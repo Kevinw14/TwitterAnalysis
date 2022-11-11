@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "oCoafSLsHPGtB5ow8n96QGlt0nv1K/bWgEEuZZuS2fM8vrMBJLo+O5cmL/U1L7rlcZX1jcUfF90JT96B/0m9bg==",
+  "dgSpecHash": "KSJWtG6FZhlg5El4alXLjE7+qjuY/mNwBY1hgMK4beikB7ukLveHAKj/p7bLjv46NT+nVx9fqFPRpBNFkfFP/Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\smartlab\\Desktop\\TwitterAnalysis\\TwitterAnalysis\\TwitterAnalysis.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\smartlab\\.nuget\\packages\\fontawesome.wpf\\4.7.0.9\\fontawesome.wpf.4.7.0.9.nupkg.sha512",
     "C:\\Users\\smartlab\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
-    "C:\\Users\\smartlab\\.nuget\\packages\\twitterapi\\1.0.0.16\\twitterapi.1.0.0.16.nupkg.sha512"
+    "C:\\Users\\smartlab\\.nuget\\packages\\twitterapi\\1.0.0.21\\twitterapi.1.0.0.21.nupkg.sha512"
   ],
   "logs": [
     {

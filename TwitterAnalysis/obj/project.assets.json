@@ -28,7 +28,7 @@
           }
         }
       },
-      "TwitterAPI/1.0.0.16": {
+      "TwitterAPI/1.0.0.21": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1"
@@ -93,14 +93,14 @@
         "packageIcon.png"
       ]
     },
-    "TwitterAPI/1.0.0.16": {
-      "sha512": "40N9x7bYZzNkIkGTkMsxnJO52tUHxeMm8Ue5JsMzgj+LnAgJOeRuQAMNe466ibnCIgZM8QJvJeMMdV6S4SDcvA==",
+    "TwitterAPI/1.0.0.21": {
+      "sha512": "g6sEPyGPlWBAFZBaoo2ehCj0TsWohSJLmOmaxcDGUt8ssqqnabIov52RsRLnlF8+l1eQTmR8yk/MGZ1GShCvaQ==",
       "type": "package",
-      "path": "twitterapi/1.0.0.16",
+      "path": "twitterapi/1.0.0.21",
       "files": [
         ".nupkg.metadata",
         "lib/netstandard2.1/TwitterAPI.dll",
-        "twitterapi.1.0.0.16.nupkg.sha512",
+        "twitterapi.1.0.0.21.nupkg.sha512",
         "twitterapi.nuspec"
       ]
     }
@@ -109,7 +109,7 @@
     "net6.0-windows7.0": [
       "FontAwesome.WPF >= 4.7.0.9",
       "Newtonsoft.Json >= 13.0.1",
-      "TwitterAPI >= 1.0.0.16"
+      "TwitterAPI >= 1.0.0.21"
     ]
   },
   "packageFolders": {
@@ -162,7 +162,7 @@
           },
           "TwitterAPI": {
             "target": "Package",
-            "version": "[1.0.0.16, )"
+            "version": "[1.0.0.21, )"
           }
         },
         "imports": [

@@ -51,7 +51,7 @@
             },
             "TwitterAPI": {
               "target": "Package",
-              "version": "[1.0.0.16, )"
+              "version": "[1.0.0.21, )"
             }
           },
           "imports": [

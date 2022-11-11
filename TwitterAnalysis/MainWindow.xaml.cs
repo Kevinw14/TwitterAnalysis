@@ -24,9 +24,10 @@ namespace TwitterAnalysis
             try
             {
                 APIResponse<TweetSearchData> SearchResponse = await Client.SearchTweets(TweetSearchRequest);
+                string size_of_tweets = SearchResponse.Data.Data.Count.ToString();
+                string size_of_users = SearchResponse.Data.Includes.Users.Count.ToString();
                 TweetTableView.Datasource = this;
                 this.TweetSearchData = SearchResponse.Data;
-                MessageBox.Show(SearchResponse.Data.Includes.Users.Count.ToString());
                 TweetTableView.Refresh();
             }
             catch (Exception e)
@@ -37,16 +38,16 @@ namespace TwitterAnalysis
 
         public int NumberOfRows()
         {
-            return TweetSearchData.Data.Count;
+            return TweetSearchData.Meta.Result_Count;
         }
 
         public TableViewCell TableViewCellAtIndexPath(IndexPath IndexPath)
         {
             Tweet Tweet = TweetSearchData.Data[IndexPath.Row];
-            //User User = TweetSearchData.Includes.Users[IndexPath.Row];
+            User? User = TweetSearchData.Includes.Users.Find(element => element.Id == Tweet.Author_Id);
             TweetTableViewCell Cell = new TweetTableViewCell(IndexPath);
             Cell.TweetLabel.Text = Tweet.Text;
-            //Cell.UsernameLabel.Content = User.Username;
+            Cell.UsernameLabel.Content = User?.Username;
             return Cell;
 
         }
