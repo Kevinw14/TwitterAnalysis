@@ -6,10 +6,11 @@
              xmlns:local="clr-namespace:TwitterAnalysis"
              mc:Ignorable="d" Background="white">
     <StackPanel Orientation="Horizontal">
-        <Label>Image</Label>
+        <Image x:Name="ProfileImage"/>
         <StackPanel Orientation="Vertical">
             <Label x:Name="UsernameLabel">Username</Label>
             <TextBlock x:Name="TweetLabel" TextWrapping="WrapWithOverflow">Tweet</TextBlock>
+            <Image Height="100" Width="100"/>
         </StackPanel>
     </StackPanel>
 </local:TableViewCell>

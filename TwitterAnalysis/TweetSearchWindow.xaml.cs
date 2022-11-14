@@ -138,6 +138,7 @@ namespace TwitterAnalysis
             SearchRequest.Expansions.Add(Expansion.AUTHOR_ID);
             SearchRequest.UserFields.Add(UserField.USERNAME);
             SearchRequest.UserFields.Add(UserField.VERIFIED);
+            SearchRequest.UserFields.Add(UserField.PROFILE_IMAGE_URL);
             Delegate?.TweetSearchWindowExecuteButtonPressed(SearchRequest);
             this.Close();
         }

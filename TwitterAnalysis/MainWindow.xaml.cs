@@ -4,6 +4,8 @@ using TwitterAPI;
 using System.Collections.Generic;
 using System.Data;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
+using System.Windows.Media;
 
 namespace TwitterAnalysis
 {
@@ -48,6 +50,7 @@ namespace TwitterAnalysis
             TweetTableViewCell Cell = new TweetTableViewCell(IndexPath);
             Cell.TweetLabel.Text = Tweet.Text;
             Cell.UsernameLabel.Content = User?.Username;
+            Cell.ProfileImage.Source = new BitmapImage(new Uri(User!.profile_image_url));
             return Cell;
 
         }
